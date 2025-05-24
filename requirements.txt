@@ -1,0 +1,39 @@
+# Requirements for Surrogate Safety Measures (SSM) Analyzer
+
+# --- PyTorch related ---
+# Please install PyTorch with CUDA support matching your system's CUDA toolkit version
+# by following the instructions at https://pytorch.org/get-started/locally/
+# Example command from PyTorch website (check for current versions):
+# pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+torch>=1.13
+torchvision>=0.14 # Install alongside PyTorch
+torchaudio>=0.13 # Install alongside PyTorch
+
+# --- Object Detection (YOLO) ---
+# Used for detecting vehicles in video frames.
+ultralytics>=8.0.0
+
+# --- Computer Vision (OpenCV) ---
+# Essential for video I/O, image manipulation, and drawing annotations.
+opencv-python>=4.0
+
+# --- Numerical and Utility Libraries ---
+# NumPy is a fundamental package for numerical computation with Python.
+numpy>=1.20
+
+# SciPy provides many user-friendly and efficient numerical routines.
+# Often a dependency for tracking algorithms (e.g., Kalman filter, optimal assignment in DeepSORT).
+scipy>=1.8
+
+# PyYAML is used for parsing YAML configuration files, which DeepSORT might use.
+PyYAML>=6.0
+
+# easydict allows accessing dictionary keys as attributes (dict.key instead of dict['key']).
+# Often used with PyYAML for convenient access to configuration parameters in DeepSORT implementations.
+easydict>=1.9
+
+# Note: The DeepSORT library itself is not listed here as it's often installed
+# directly from a specific GitHub repository due to variations and ongoing development.
+# Users should refer to the documentation of the chosen DeepSORT implementation for its
+# specific installation instructions (e.g., ZQPei/deep_sort_pytorch).
+# Some DeepSORT versions might have additional specific dependencies.
